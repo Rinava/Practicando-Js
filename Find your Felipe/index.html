@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>¿Dónde está Felipe?</title>
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <h1>Bienvenido al primer juego donde tú tendrás que encontrar al buscado Felipe</h1>
+    <p>Selecciona uno de los 3 objetos en pantalla para ver si tenes la suerte que se necesita</p>
+
+    <img src="https://cdn.shopify.com/s/files/1/2197/9785/products/Alex_BackpackPhotoshop1_1200x.png?v=1542337334" alt="Mochilla 1" 
+    id="1" onclick="MochilaRandom(1)" style="width:200;height:100px;">
+    <img src="https://cdn.shopify.com/s/files/1/2197/9785/products/Alex_BackpackPhotoshop1_1200x.png?v=1542337334" alt="Mochilla 2" 
+    id="2" onclick="MochilaRandom(2)" style="width:200;height:100px;">
+    <img src="https://cdn.shopify.com/s/files/1/2197/9785/products/Alex_BackpackPhotoshop1_1200x.png?v=1542337334" alt="Mochilla 3" 
+    id="3" onclick="MochilaRandom(3)" style="width:200;height:100px; ">
+    <p id="Resultado" ></p>
+    <button id="btnRecargar" onclick="Recargar()">Jugar Nuevamente</button>
+</body>
+
+
+<script>
+function Recargar(){
+    window.location.reload(true);
+}
+
+function MochilaRandom(id){
+    let numerorandom=Math.floor(Math.random()*3)
+    if(id==numerorandom){
+        document.getElementById(id).src="Felipe.jpg";
+        document.getElementById("Resultado").textContent="Felicidades, lo encontraste :)";
+        switch(id){
+            case 1:
+                document.getElementById(2).style.visibility="hidden";
+                document.getElementById(3).style.visibility="hidden";
+                break;
+            case 2:
+                document.getElementById(1).style.visibility="hidden";
+                document.getElementById(3).style.visibility="hidden";
+                break;
+            case 3:
+                document.getElementById(1).style.visibility="hidden";
+                document.getElementById(2).style.visibility="hidden";
+                break;
+        }      
+    }   else if(id!=numerorandom){
+             document.getElementById("Resultado").textContent="Seguí intentando, todavía no lo encontraste :(";
+
+        
+    }    
+}
+
+</script>
