@@ -10,26 +10,25 @@
 
 <body>
     <header>
-        <nav>
-            <a class="link" href="/To-Do/done.html">Tasks you completed</a>
-        </nav>
+        <img class="banner" src="Resources/checkList.jpg"> 
+        <h1 class="title">To do list</h1>
+        <form id="add-task" class="form">
+            <input class="input" id="new-task" placeholder="Create new task">
+            <button class="btn">Save</button>
+        </form>
     </header>
-    <h1 class="title">To do list</h1>
-    <form id="add-task" class="form">
-        <input id="new-task" placeholder="Create new task">
-        <button class="btn">Save</button>
-    </form>
+
     <h2 class="subtitle">Tasks to do:</h2>
     <div id="tasks-list" class="list">
         <ul>
             <li>Do the dishes 
-                <input type="checkbox">
+                <input type="checkbox" class='chkboxDone' >
             </li>
             <li>Clean the floor
-                <input type="checkbox">
+                <input type="checkbox" class='chkboxDone' >
             </li>
             <li>Take out the trash
-                <input type="checkbox">
+                <input type="checkbox" class='chkboxDone' >
             </li>
         </ul>
     </div>

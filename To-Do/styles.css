@@ -1,18 +1,47 @@
 body{
+    background-image: linear-gradient( navy ,
+    #8f94fb );
+    padding:0%;
+}
+.banner{
+    align-content: center;
+    width: 100%;
+    background-size: cover;
+    height: 100px;
+    margin:0%;
+
+}
+.input{
+    border-radius: 3px;
+    padding-right:30%;
+    margin-left: 20px;
+    
+}
+.btn{
     background-color: navy;
-    padding:10%;
-    margin-left:auto;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    display:inline-block;
 }
 .title{
     color:white;
- 
+    font-size: xx-large;
+    text-align: center;
+    
+    
 }
-.link{
-    color:darkkhaki;
+.subtitle{
+    color:white;
+    font-size: medium;
+    text-align: center;
 }
-
 .list{
     background-color: white;
     color:navy;
     box-sizing: border-box;
+    border-radius: 3px;
+    margin-left: 20px;
 }
