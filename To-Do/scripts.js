@@ -22,7 +22,7 @@ addForm.addEventListener('submit', function (event) {
    const newChkbox = document.createElement('input')
    newChkbox.className = 'chkboxDone';
    newChkbox.setAttribute('type', 'checkbox');
-   newChkbox.addEventListener('CheckboxStateChange', (e) => eTaskDone(e));
+   newChkbox.addEventListener('change', (e) => eTaskDone(e));
 
    newLi.textContent = task;
 
@@ -36,5 +36,5 @@ let chkboxs = document.querySelectorAll('#tasks-list .chkboxDone');
 
 
 Array.from(chkboxs).forEach(function (chkbox) {
-   chkbox.addEventListener('CheckboxStateChange', (e) => eTaskDone(e))
+   chkbox.addEventListener('change', (e) => eTaskDone(e))
 });
