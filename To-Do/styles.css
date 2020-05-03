@@ -1,0 +1,18 @@
+body{
+    background-color: navy;
+    padding:10%;
+    margin-left:auto;
+}
+.title{
+    color:white;
+ 
+}
+.link{
+    color:darkkhaki;
+}
+
+.list{
+    background-color: white;
+    color:navy;
+    box-sizing: border-box;
+}
